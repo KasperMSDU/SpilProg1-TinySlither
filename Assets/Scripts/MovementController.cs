@@ -17,6 +17,10 @@ public class MovementController : MonoBehaviour
 
     public Color defaultColor = Color.black;
     public Color boostColor = Color.red;
+    public AudioSource whiteNoiseSource;
+    public AudioClip whiteNoise;
+    public float defaultPitch = 1;
+    public float boostPitch;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +31,8 @@ public class MovementController : MonoBehaviour
         movementVector = new Vector2(0, 1);
         trail.startColor = defaultColor;
         sprite.color = defaultColor;
-
+        whiteNoiseSource.clip = whiteNoise;
+        whiteNoiseSource.pitch = defaultPitch;
     }
 
     // Update is called once per frame
@@ -62,6 +67,8 @@ public class MovementController : MonoBehaviour
             speed = Mathf.Lerp(speed, defaultSpeed, 0.5f);
             sprite.color = Color.Lerp(sprite.color, defaultColor, 0.025f);
             trail.startColor = Color.Lerp(trail.startColor, defaultColor, 0.025f);
+
+            whiteNoiseSource.pitch = Mathf.Lerp(whiteNoiseSource.pitch, defaultPitch, 0.25f);
         }
         movementVector = Quaternion.AngleAxis(rotateAngle, Vector3.forward) * movementVector;
         movementVector = movementVector.normalized;
@@ -79,6 +86,8 @@ public class MovementController : MonoBehaviour
         speed = Mathf.Lerp(speed, boostSpeed, 0.5f);
         sprite.color = Color.Lerp(sprite.color, boostColor, 0.1f);
         trail.startColor = Color.Lerp(trail.startColor, boostColor, 0.1f);
+
+        whiteNoiseSource.pitch = Mathf.Lerp(whiteNoiseSource.pitch, boostPitch, 0.25f);
     }
     IEnumerator BoostTimeout(float timeout)
     {
