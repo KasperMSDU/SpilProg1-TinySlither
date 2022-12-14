@@ -471,6 +471,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!82 &1229073867 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8932407215317467832, guid: 8aa1d74fd8ff3ac4b8692003c9eda406, type: 3}
+  m_PrefabInstance: {fileID: 7297590073608815765}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1851885150
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,6 +629,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1229073861, guid: 8aa1d74fd8ff3ac4b8692003c9eda406, type: 3}
+      propertyPath: m_Volume
+      value: 0.098
+      objectReference: {fileID: 0}
     - target: {fileID: 7297590073725336112, guid: 8aa1d74fd8ff3ac4b8692003c9eda406, type: 3}
       propertyPath: m_Name
       value: Player
@@ -671,6 +680,14 @@ PrefabInstance:
     - target: {fileID: 7297590073725336124, guid: 8aa1d74fd8ff3ac4b8692003c9eda406, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297590073725336127, guid: 8aa1d74fd8ff3ac4b8692003c9eda406, type: 3}
+      propertyPath: clankSource
+      value: 
+      objectReference: {fileID: 1229073867}
+    - target: {fileID: 8932407215317467832, guid: 8aa1d74fd8ff3ac4b8692003c9eda406, type: 3}
+      propertyPath: m_Volume
+      value: 0.236
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8aa1d74fd8ff3ac4b8692003c9eda406, type: 3}
