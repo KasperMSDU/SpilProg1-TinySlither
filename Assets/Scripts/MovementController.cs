@@ -60,7 +60,6 @@ public class MovementController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && canBoost == true)
         {
             boost();
-            Debug.Log(sprite.color);
         }
         else
         {
