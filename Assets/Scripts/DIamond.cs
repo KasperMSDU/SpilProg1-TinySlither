@@ -34,6 +34,9 @@ public class DIamond : MonoBehaviour
 
         //using the "AddForce" function, along the forceVector times the force
         rb.AddForce(forceVector * force);
+
+        //Rotates this gameobject randomly on the Z axis
+        transform.Rotate(0.0f, 0.0f, Random.Range(0.0f, 360.0f));
     }
 
     // Update is called once per frame
